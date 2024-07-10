@@ -12,7 +12,7 @@
     --rosa-claro: #FFB7D6;
     --text-color: #ffffff;
     --text-color-2: ##FF9CC7;
-    --color-00: #0000001a;
+    --color-00: linear-gradient(90deg, rgba(157, 180, 221, 0.397) 0%, rgba(234, 133, 192, 0.337) 100%);
 
     /* Extras */
     --color-01: #999999;
@@ -51,7 +51,7 @@ header{
     left: 0;
     width: 100%;
     padding: 1.1rem;
-    background: var(--gradient-bg-main);
+    background: var(--color-00);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -72,9 +72,9 @@ header{
 }
 
 .nav a:hover{
-    color: var(--rosa-escuro);
-    transition: all 0.5s;
-    border-bottom: 4px solid var(--rosa-escuro);
+    color: #fff;
+    transition: all 0.3s;
+    border-bottom: 4px solid #fff;
 }
 
 section{
@@ -91,6 +91,7 @@ span{
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .about{
@@ -102,10 +103,17 @@ span{
     background-size: cover;
     min-height:max-content;
     padding-bottom: 400px;
+    margin-top: 1.5rem;
 }
 .home-img img, .about-img img{
     width: 100%;
     height: auto;
+}
+
+.home-img img{
+    max-width: 640PX;
+    transform: translate(0px);
+    animation: float 5s ease-in-out infinite;
 }
 
 .home-content, .about-content {
@@ -126,13 +134,28 @@ span{
 .home-content p, .about-content p {
     margin-top: 1.2rem;
     text-align: justify;
+    margin-bottom: 1.5rem;
+}
+
+.home-content .icons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem; 
 }
 
 .services{
     background: var(--gradient-bg-1);
 }
 
-.services h2,
+.services h2{
+    font-size: 2.2rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    color: #FF9CC7;
+    margin-top: 2rem;
+}
+
 .portifolio h2,
 .contact h2 {
     font-size: 2.2rem;
@@ -142,8 +165,10 @@ span{
 
 .services-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 
@@ -172,7 +197,7 @@ span{
 
 .services-box:hover {
     border-color: var(--rosa-escuro);
-    transform: scale(1.01);
+    transform: scale(1.03);
 }
 
 .services-box h3 {
@@ -188,24 +213,83 @@ span{
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    flex-grow: 1;
 }
 
 .services-box .btn {
     margin-top: 1.2rem;
+    background-color: #FF9CC7;
+    color: #fff;
+    display: inline-block;
+    padding: 0.7rem 1.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    border-radius: 100px;
+    transition: all .2s;
+    position: relative;
+    overflow: hidden;
 }
+
 
 .btn{
     display: inline-block;
     padding: 0.7rem 1.8rem;
-    background-color: #FF9CC7;
-    border-radius: 2rem;
-    color: var(--text-color);
     font-weight: 600;
     letter-spacing: 0.1rem;
-    transition: 0.3s ease;
     margin-top: 1.2rem;
+    position: absolute;
+    cursor: pointer;
 
 }
+
+.btn:link,
+.btn:visited {
+    border-radius: 100px;
+    transition: all .2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-pink {
+    background-color: #FF9CC7;
+    color: #fff;
+}
+
+.btn::after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-pink::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
 
 
 @media (max-width: 1200px) {
@@ -226,3 +310,55 @@ span{
     }
 }
 
+@media (max-width: 768px) {
+    .home, .about {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .home-content, .about-content {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .home-content h1, .about-content h1 {
+        font-size: 2rem;
+    }
+
+    .home-content h3, .about-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .home-content p, .about-content p {
+        text-align: left;
+    }
+
+    .home-content .icons img, .about-content .icons img {
+        width: 2rem;
+        margin-top: 1.9rem;
+    }
+}
+
+@keyframes float{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-30px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

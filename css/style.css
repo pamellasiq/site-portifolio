@@ -602,8 +602,8 @@ footer{
         font-size: 1.5rem;
     }
 
-    .home-content .icon img, .about-content .icons img {
-        width: 1rem;
+    .home-content .icon img, .about-img img {
+        width: 5rem;
     }
 
     .portifolio-box h4 {

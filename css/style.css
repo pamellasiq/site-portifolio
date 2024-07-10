@@ -606,6 +606,11 @@ footer{
         width: 3rem;
     }
 
+    .home-img img{
+        width: 5rem;
+        margin-top: 5vw;
+    }
+
     .about-img{
         width: 8rem;
     }

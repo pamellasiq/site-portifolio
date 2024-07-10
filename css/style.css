@@ -588,18 +588,39 @@ footer{
 
 /* Estilos para tablets pequenos */
 @media (max-width: 600px) {
-    /* Exemplo de ajuste */
+    .contact{
+        margin-bottom: 0.1vw;
+    }
     form .input-box input,
     form textarea, form a {
         width: calc(100% - 1.8rem);
     }
 
+    .form{
+        width: 5rem;
+    }
+    .home{
+        padding-bottom: 0.3rem;
+    }
+    .home-content{
+        margin-top: 15vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .home-content h1, .about-content h1 {
         font-size: 1.7rem;
+        text-align: center;
     }
 
     .home-content h3, .about-content h3 {
         font-size: 0.5rem;
+        text-align: center;
+    }
+
+    .home-content p, .about-content p{
+        font-size: 1rem;
+        text-align: center !important;
     }
 
     .home-content .icon{
@@ -607,11 +628,23 @@ footer{
     }
 
     .home-img img{
-        width: 25rem;
+        margin-top: 25vw;
+        width: 18rem;
+    }
+
+    .home .btn, .about .btn {
+        position: relative;
     }
 
     .about-img{
-        width: 8rem;
+        width: 18rem;
+    }
+
+    .about-content{
+        margin-top: 0.5vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .portifolio-box h4 {

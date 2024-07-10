@@ -1,11 +1,228 @@
 /* Imports the Inter font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+:root{
+    --gradient-bg-main: linear-gradient(90deg, rgba(157,180,221,1) 0%, rgba(234,133,192,1) 100%);
+    --gradient-bg-1: linear-gradient(180deg, #FBE6EF, #FFB7D6);
+    --gradient-bg-2: linear-gradient(180deg, #FFB7D6, #FBE6EF);
+    --gradient-bg-3: linear-gradient(180deg, #FCE4EE, #B1A8D6);
+    --gradient-bg-4: linear-gradient(180deg, rgba(177,168,214,1) 0%, rgba(233,134,193,1) 100%);
+    --bg-footer: background-color: #FCE4EE;
+    --rosa-escuro: #FF9CC7;
+    --rosa-claro: #FFB7D6;
+    --text-color: #ffffff;
+    --text-color-2: ##FF9CC7;
+    --color-00: #0000001a;
+
+    /* Extras */
+    --color-01: #999999;
+    --color-02: #009539;
+    --color-03: #7950f2;
+    --color-04: #c00000;
+    --color-05: #232323;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
 html{
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
     "slnt" 0;
 }
+
+body{
+    background: var(--gradient-bg-main);
+    color: var(--text-color);
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.1rem;
+    background: var(--gradient-bg-main);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+
+.nav a{
+    font-size: 1.2rem;
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+}
+
+.nav a:hover{
+    color: var(--rosa-escuro);
+    transition: all 0.5s;
+    border-bottom: 4px solid var(--rosa-escuro);
+}
+
+section{
+    min-height: 100vh;
+    padding: 6rem 6rem 2rem;
+}
+
+span{
+    color: var(--rosa-escuro);
+}
+
+.home, .about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.about{
+    background: var(--gradient-bg-4);
+}
+.home{
+    background-image: url('../img/stars.png');
+    background-position: center;
+    background-size: cover;
+    min-height:max-content;
+    padding-bottom: 400px;
+}
+.home-img img, .about-img img{
+    width: 100%;
+    height: auto;
+}
+
+.home-content, .about-content {
+    width: 45%;
+}
+
+.home-content h1, .about-content h1 {
+    font-weight: 700;
+    line-height: 1.3;
+    font-size: 2.7rem;
+}
+
+.home-content h3, .about-content h3 {
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+.home-content p, .about-content p {
+    margin-top: 1.2rem;
+    text-align: justify;
+}
+
+.services{
+    background: var(--gradient-bg-1);
+}
+
+.services h2,
+.portifolio h2,
+.contact h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.services-box {
+    flex: 1 1 300px;
+    max-width: 600px;
+    min-width: 300px;
+    padding: 2rem 1rem 2.5rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    border: solid 0.20rem var(--rosa-claro);
+    background-color: var(--rosa-claro);
+    transition: 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 20px 40px #5705131c;
+}
+
+.services-box img {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+}
+
+.services-box:hover {
+    border-color: var(--rosa-escuro);
+    transform: scale(1.01);
+}
+
+.services-box h3 {
+    font-size: 1.5rem;
+}
+
+.services-box p {
+    margin: 0.5rem;
+    letter-spacing: 0.1rem;
+    /* Limita o número de linhas e oculta o excesso */
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.services-box .btn {
+    margin-top: 1.2rem;
+}
+
+.btn{
+    display: inline-block;
+    padding: 0.7rem 1.8rem;
+    background-color: #FF9CC7;
+    border-radius: 2rem;
+    color: var(--text-color);
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    transition: 0.3s ease;
+    margin-top: 1.2rem;
+
+}
+
+
+@media (max-width: 1200px) {
+    .services-box {
+        min-width: 250px;
+    }
+}
+
+@media (max-width: 992px) {
+    .services-box {
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-box {
+        min-width: 100%;
+    }
+}
+

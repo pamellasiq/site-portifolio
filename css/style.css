@@ -541,7 +541,7 @@ footer{
     /* Exemplo de ajuste */
     form .input-box input,
     form textarea, form a {
-        width: calc(100% - 3rem);
+        width: calc(100% - 1rem);
     }
 
     .home-content h1, .about-content h1 {
@@ -553,7 +553,7 @@ footer{
     }
 
     .home-content .icon img, .about-content .icons img {
-        width: calc(100% - 3rem);
+        width: 1.5rem;
     }
 
     .portifolio-box h4 {

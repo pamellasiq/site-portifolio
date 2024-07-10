@@ -536,8 +536,84 @@ footer{
     background-color: #fdfafd81;
 }
 
-/* Media query para telas menores que 768px */
-@media screen and (max-width: 768px) {
+/* Estilos para dispositivos móveis pequenos */
+@media (max-width: 320px) {
+    /* Exemplo de ajuste */
+    form .input-box input,
+    form textarea, form a {
+        width: calc(100% - 1rem);
+    }
+
+    .home-content h1, .about-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .home-content h3, .about-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .home-content .icon img, .about-content .icons img {
+        width: 1.5rem;
+    }
+
+    .portifolio-box h4 {
+        font-size: 0.9rem;
+    }
+}
+
+/* Estilos para dispositivos móveis médios a grandes */
+@media (max-width: 480px) {
+    /* Exemplo de ajuste */
+    form .input-box input,
+    form textarea, form a {
+        width: calc(100% - 1.5rem);
+    }
+
+    .home-content h1, .about-content h1 {
+        font-size: 2rem;
+    }
+
+    .home-content h3, .about-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .home-content .icon img, .about-content .icons img {
+        width: 1.8rem;
+    }
+
+    .portifolio-box h4 {
+        font-size: 1rem;
+    }
+}
+
+/* Estilos para tablets pequenos */
+@media (max-width: 600px) {
+    /* Exemplo de ajuste */
+    form .input-box input,
+    form textarea, form a {
+        width: calc(100% - 1.8rem);
+    }
+
+    .home-content h1, .about-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .home-content h3, .about-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .home-content .icon img, .about-content .icons img {
+        width: 2rem;
+    }
+
+    .portifolio-box h4 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Estilos para tablets médios a grandes */
+@media (max-width: 768px) {
+    /* Menu hamburguer */
     .nav {
         display: none;
     }
@@ -548,9 +624,6 @@ footer{
 
     .menu-hamburguer .bar1, .menu-hamburguer .bar2, .menu-hamburguer .bar3 {
         background-color: #fff;
-    }
-
-    .menu-hamburguer .bar1, .menu-hamburguer .bar2, .menu-hamburguer .bar3 {
         width: 1.5rem;
         height: 0.2rem;
         margin: 0.2rem 0;
@@ -563,11 +636,8 @@ footer{
     .nav-responsive.open {
         display: flex;
     }
-}
 
-/* responsive */
-
-@media (max-width: 768px) {
+    /* Form */
     form .input-box {
         flex-direction: column;
         align-items: center;
@@ -577,28 +647,8 @@ footer{
     form textarea, form a {
         width: calc(100% - 2rem);
     }
-}
 
-
-@media (max-width: 1200px) {
-    .services-box {
-        min-width: 250px;
-    }
-}
-
-@media (max-width: 992px) {
-    .services-box {
-        min-width: 200px;
-    }
-}
-
-@media (max-width: 768px) {
-    .services-box {
-        min-width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
+    /* Home, About */
     .home, .about {
         flex-direction: column;
         align-items: flex-start;
@@ -625,9 +675,8 @@ footer{
         width: 2rem;
         margin-top: 1.9rem;
     }
-}
 
-@media (max-width: 768px) {
+    /* Portfolio */
     .portifolio-container {
         grid-template-columns: 1fr;
     }
@@ -644,6 +693,14 @@ footer{
         font-size: 1rem;
     }
 }
+
+/* Estilos para desktops e laptops pequenos */
+@media (max-width: 1200px) {
+    .services-box {
+        min-width: 250px;
+    }
+}
+
 
 @keyframes float{
     0%{

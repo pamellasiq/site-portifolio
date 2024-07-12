@@ -589,10 +589,10 @@ footer{
 /* Estilos para tablets pequenos */
 @media (max-width: 600px) {
     .home{
-        padding-bottom: 0.3rem;
+        padding-bottom: 0.1rem;
     }
     .home-content{
-        margin-top: 18vw;
+        margin-top: 10vw;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -618,7 +618,10 @@ footer{
 
     .home-img img{
         margin-top: 25vw;
-        width: 18rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15rem;
     }
 
     .home .btn, .about .btn {
@@ -648,15 +651,33 @@ footer{
         width: 5rem;
     }
 
+    .portifolio{
+        margin: 0 auto;
+    }
     .portifolio-box .portifolio-layer {
         display: none;
     }
 
     .portifolio-box.show-layer .portifolio-layer {
         display: flex;
+    }
 
-    .portifolio-box h4 {
-        font-size: 0.9rem;
+    .portifolio-layer h4{
+        font-size: 1rem;
+    }
+
+    .portifolio-layer p{
+        font-size: 0.6rem;
+    }
+
+    .portifolio-layer a i{
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+
+    .portifolio-layer a{
+        width: 1.5rem;
+        height: 1.5rem;
     }
 }
 

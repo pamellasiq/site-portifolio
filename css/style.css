@@ -537,52 +537,97 @@ footer{
 }
 
 /* Estilos para dispositivos móveis pequenos */
-@media (max-width: 320px) {
-    /* Exemplo de ajuste */
-    form .input-box input,
-    form textarea, form a {
-        width: calc(100% - 1rem);
-    }
-
-    .home-content h1, .about-content h1 {
-        font-size: 1.8rem;
-    }
-
-    .home-content h3, .about-content h3 {
-        font-size: 1.2rem;
-    }
-
-    .home-content .icon img, .about-content .icons img {
-        width: 1.5rem;
-    }
-
-    .portifolio-box h4 {
-        font-size: 0.9rem;
-    }
-}
-
-/* Estilos para dispositivos móveis médios a grandes */
 @media (max-width: 480px) {
-    /* Exemplo de ajuste */
-    form .input-box input,
-    form textarea, form a {
-        width: calc(100% - 1.5rem);
+    /* Seus estilos específicos para dispositivos móveis pequenos */
+    .home{
+        padding-bottom: 0.1rem;
     }
-
+    .home-content{
+        margin-top: 10vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .home-content h1, .about-content h1 {
-        font-size: 2rem;
+        font-size: 1.1rem;
+        text-align: center;
     }
 
     .home-content h3, .about-content h3 {
-        font-size: 1.4rem;
+        font-size: 0.3rem;
+        text-align: center;
     }
 
-    .home-content .icon img, .about-content .icons img {
-        width: 1.8rem;
+    .home-content p, .about-content p{
+        font-size: 0.1rem;
+        text-align: center !important;
     }
 
-    .portifolio-box h4 {
+    .home-content .icon{
+        width: 1rem;
+    }
+
+    .home-img img{
+        display: flex;
+        margin-top: 25vw;
+        width: 15rem;
+        margin: 10px 10px 10px 70px;
+    }
+
+    .home .btn, .about .btn {
+        position: relative;
+    }
+
+    .about-img{
+        width: 18rem;
+    }
+
+    .about-content{
+        margin-top: 0.5vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact{
+        margin-bottom: 0.1vw;
+    }
+    form .input-box input,
+    form textarea, form a {
+        width: calc(100% - 1.8rem);
+    }
+
+    .form{
+        width: 5rem;
+    }
+
+    .portifolio{
+        margin: 0 auto;
+    }
+    .portifolio-box .portifolio-layer {
+        display: none;
+    }
+
+    .portifolio-box.show-layer .portifolio-layer {
+        display: flex;
+    }
+
+    .portifolio-layer h4{
         font-size: 1rem;
+    }
+
+    .portifolio-layer p{
+        font-size: 0.6rem;
+    }
+
+    .portifolio-layer a i{
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+
+    .portifolio-layer a{
+        width: 1.5rem;
+        height: 1.5rem;
     }
 }
 
@@ -617,11 +662,10 @@ footer{
     }
 
     .home-img img{
-        margin-top: 25vw;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        margin-top: 25vw;
         width: 15rem;
+        margin: 90px 10px 10px 70px;
     }
 
     .home .btn, .about .btn {

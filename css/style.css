@@ -538,7 +538,6 @@ footer{
 
 /* Estilos para dispositivos móveis pequenos */
 @media (max-width: 480px) {
-    /* Seus estilos específicos para dispositivos móveis pequenos */
     .home{
         padding-bottom: 0.1rem;
     }
@@ -559,19 +558,19 @@ footer{
     }
 
     .home-content p, .about-content p{
-        font-size: 0.1rem;
+        font-size: 0.5rem;
         text-align: center !important;
     }
 
     .home-content .icon{
-        width: 1rem;
+        width: 3rem;
     }
 
     .home-img img{
         display: flex;
         margin-top: 25vw;
         width: 15rem;
-        margin: 10px 10px 10px 70px;
+        margin: 90px 10px 10px 70px;
     }
 
     .home .btn, .about .btn {
@@ -630,7 +629,6 @@ footer{
         height: 1.5rem;
     }
 }
-
 /* Estilos para tablets pequenos */
 @media (max-width: 600px) {
     .home{
